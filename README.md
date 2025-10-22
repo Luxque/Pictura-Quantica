@@ -3,6 +3,11 @@
 ## Repository Description
 
 
+## Quick Start
+
+```sl
+pip install numpy pillow opencv-python scikit-learn
+```
 
 ## Dataset
 
@@ -19,9 +24,13 @@ It is used here to train and evaluate quantum-based classifiers.
 
 ### Download Guide
 
+1. Install.
+2. Initialize Google Cloud.
 ```sh
 gcloud init
 ```
+3. Navigate yourself to `Pictura-Quantica/dataset` by `cd` command.
+4. Download dataset using this command.
 ```sh
 gsutil -m cp gs://quickdraw_dataset/full/numpy_bitmap/*.npy .
 ```

@@ -1,6 +1,13 @@
-def main():
-    pass
+import train
 
 
-if __name__ == "__main__":
+def main() -> None:
+    print("Loading data...")
+    data = train.train('../dataset')
+    print("Loading complete.")
+
+    return
+
+
+if __name__ == '__main__':
     main()

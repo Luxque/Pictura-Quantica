@@ -2,9 +2,10 @@ import train
 
 
 def main() -> None:
-    print("Loading data...")
-    data = train.train('../dataset')
-    print("Loading complete.")
+    for i in [5, 10, 15, 20, 25, 30, 31]:
+        print(f"PCA Components: {i}")
+        train.train(num_pca_components=i)
+        print()
 
     return
 

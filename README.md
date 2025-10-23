@@ -6,8 +6,9 @@
 ## Quick Start
 
 ```sl
-pip install numpy pillow opencv-python scikit-learn
+pip install numpy pillow opencv-python scikit-learn qiskit qiskit-machine-learning matplotlib pylatexenc
 ```
+
 
 ## Dataset
 

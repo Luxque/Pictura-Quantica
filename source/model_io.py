@@ -21,7 +21,7 @@ def load_model() -> tuple:
     if not os.path.exists(save_location):
         raise RuntimeError("Model directory does not exist.")
 
-    model = joblib.load(save_location + 'qsvc_model.pkl')
+    model = joblib.load(save_location + 'model.pkl')
     categories = joblib.load(save_location + 'categories.pkl')
 
     print("Loading complete.")

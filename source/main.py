@@ -1,11 +1,12 @@
-import train
+from train import train
+from model_io import save_model, load_model
 
 
 def main() -> None:
-    for i in [5, 10, 15, 20, 25, 30, 31]:
-        print(f"PCA Components: {i}")
-        train.train(num_pca_components=i)
-        print()
+    print("PICTVRA QVANTICA\n")
+
+    model, category = train(num_images_per_category=500)
+    save_model(model, category)
 
     return
 

@@ -2,14 +2,15 @@ import os, joblib
 
 from qiskit_machine_learning.algorithms.classifiers import QSVC
 
+save_location = '../model/'
+
 
 def save_model(model: QSVC, categories: list) -> None:
-    save_dir = '../model/'
-    if not os.path.exists(save_dir):
-        os.makedirs(save_dir)
+    if not os.path.exists(save_location):
+        os.makedirs(save_location)
 
-    joblib.dump(model, save_dir + 'qsvm_model.pkl')
-    joblib.dump(categories, save_dir + 'categories.pkl')
+    joblib.dump(model, save_location + 'qsvc_model.pkl')
+    joblib.dump(categories, save_location + 'categories.pkl')
 
     print("Saving complete.")
 
@@ -17,12 +18,11 @@ def save_model(model: QSVC, categories: list) -> None:
 
 
 def load_model() -> tuple:
-    save_dir = '../model/'
-    if not os.path.exists(save_dir):
+    if not os.path.exists(save_location):
         raise RuntimeError("Model directory does not exist.")
 
-    model = joblib.load(save_dir + 'qsvm_model.pkl')
-    categories = joblib.load(save_dir + 'categories.pkl')
+    model = joblib.load(save_location + 'qsvc_model.pkl')
+    categories = joblib.load(save_location + 'categories.pkl')
 
     print("Loading complete.")
 

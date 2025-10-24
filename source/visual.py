@@ -1,19 +1,21 @@
 import os
 import numpy as np
 import seaborn as sns
-import matplotlib.pyplot as plt
 
 from sklearn.preprocessing import StandardScaler, MinMaxScaler, LabelEncoder
 from sklearn.decomposition import PCA
 from sklearn.metrics import accuracy_score, roc_auc_score, classification_report, confusion_matrix
 from sklearn.model_selection import train_test_split
+
+import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 
 from qiskit import QuantumCircuit
 from qiskit_machine_learning.algorithms.classifiers import QSVC
 
 
-save_location = '../model/'
+save_location = '../model'
+
 plt.style.use('dark_background')
 
 
@@ -24,7 +26,7 @@ def report_statistics(y_test: list, y_pred: np.ndarray, y_prob: np.ndarray) -> N
     auc = roc_auc_score(y_test, y_prob, multi_class='ovr') * 100.0
     report = classification_report(y_test, y_pred)
 
-    with open(save_location + 'statistics.txt', 'w') as file:
+    with open(os.path.join(save_location,'statistics.txt'), 'w') as file:
         file.write(f"Accuracy: {accuracy:.3f}%\n")
         file.write(f"AUC: {auc:.3f}%\n")
         file.write(f"Classification Report:\n{report}")
@@ -42,7 +44,7 @@ def save_feature_map(feature_map: QuantumCircuit) -> None:
 
     style = {'name': 'iqp-dark'}
     detailed_feature_map = feature_map.decompose()
-    detailed_feature_map.draw(output='mpl', style=style, fold=-1, filename=save_location + 'feature_map.png')
+    detailed_feature_map.draw(output='mpl', style=style, fold=-1, filename=os.path.join(save_location, 'feature_map.png'))
 
     print("Feature map saved.")
 
@@ -60,7 +62,7 @@ def plot_confusion_matrix(y_test: list, y_pred: np.ndarray, categories: list) ->
     plt.xlabel('Predicted')
     plt.ylabel('Actual')
     plt.title('QSVC Confusion Matrix')
-    plt.savefig(save_location + 'confusion_matrix.png')
+    plt.savefig(os.path.join(save_location, 'confusion_matrix.png'))
     plt.close()
 
     print("Confusion matrix saved.")
@@ -81,6 +83,8 @@ def plot_qsvc_decision_region(
     ) -> None:
     if not os.path.exists(save_location):
         os.makedirs(save_location)
+
+    # Convert to appropriate datatypes.
 
     X = np.array(X)
     y = np.array(y)
@@ -107,6 +111,7 @@ def plot_qsvc_decision_region(
 
     num_grid = xx.ravel().shape[0]
     num_features = model.quantum_kernel.feature_map.num_parameters
+
     if num_features > 2:
         pad_width = num_features - 2
         grid_points = np.c_[xx.ravel(), yy.ravel(), np.zeros((num_grid, pad_width))]

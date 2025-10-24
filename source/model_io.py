@@ -9,7 +9,7 @@ def save_model(model: QSVC, categories: list) -> None:
     if not os.path.exists(save_location):
         os.makedirs(save_location)
 
-    joblib.dump(model, save_location + 'qsvc_model.pkl')
+    joblib.dump(model, save_location + 'model.pkl')
     joblib.dump(categories, save_location + 'categories.pkl')
 
     print("Saving complete.")

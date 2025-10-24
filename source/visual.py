@@ -144,7 +144,7 @@ def plot_qsvc_decision_region(
     plt.title('QSVC Decision Regions')
     plt.legend()
     plt.tight_layout()
-    plt.savefig(os.path.join(save_location, 'qsvc_decision_regions.png'))
+    plt.savefig(os.path.join(save_location, 'decision_regions.png'))
     plt.close()
 
     print("QSVC decision regions saved.")

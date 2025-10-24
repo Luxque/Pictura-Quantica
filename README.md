@@ -3,10 +3,11 @@
 ## Repository Description
 
 
+
 ## Quick Start
 
 ```sl
-pip install numpy pillow opencv-python scikit-learn qiskit qiskit-machine-learning matplotlib pylatexenc
+pip install numpy pillow opencv-python scikit-learn qiskit qiskit-machine-learning matplotlib pylatexenc seaborn joblib
 ```
 
 
@@ -25,7 +26,7 @@ It is used here to train and evaluate quantum-based classifiers.
 
 ### Download Guide
 
-1. Install.
+1. Install Google Cloud.
 2. Initialize Google Cloud.
 ```sh
 gcloud init

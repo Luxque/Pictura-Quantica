@@ -6,8 +6,8 @@
 
 ## Quick Start
 
-```sl
-pip install numpy pillow opencv-python scikit-learn qiskit qiskit-machine-learning matplotlib pylatexenc seaborn joblib
+```sh
+pip install numpy pillow opencv-python scikit-learn qiskit qiskit-machine-learning matplotlib pylatexenc seaborn joblib PyQt6 -U
 ```
 
 

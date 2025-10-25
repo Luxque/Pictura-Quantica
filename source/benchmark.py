@@ -25,13 +25,11 @@ def measure_num_categories() -> tuple[list, list, list]:
         accuracies_container, elapsed_times_container = [], []
         for _ in range(repetition_per_test):
             start_time = time.time()
-
             X, y = load_data(data_location, num_categories, num_images_per_category)
             X_train, X_test, y_train, y_test, _, _, _ = reduce_dimension(X, y, num_pca_components)
             model, _ = train_qsvc(X_train, y_train, num_pca_components, reps, entanglement)
             y_pred, _ = make_prediction(model, X_test)
             accuracy = compute_accuracy(y_test, y_pred)
-
             end_time = time.time()
 
             accuracies_container.append(accuracy)
@@ -52,13 +50,11 @@ def measure_num_images_per_category() -> tuple[list, list, list]:
         accuracies_container, elapsed_times_container = [], []
         for _ in range(repetition_per_test):
             start_time = time.time()
-
             X, y = load_data(data_location, num_categories, num_images_per_category)
             X_train, X_test, y_train, y_test, _, _, _ = reduce_dimension(X, y, num_pca_components)
             model, _ = train_qsvc(X_train, y_train, num_pca_components, reps, entanglement)
             y_pred, _ = make_prediction(model, X_test)
             accuracy = compute_accuracy(y_test, y_pred)
-
             end_time = time.time()
 
             accuracies_container.append(accuracy)
@@ -79,13 +75,11 @@ def measure_num_pca_components() -> tuple[list, list, list]:
         accuracies_container, elapsed_times_container = [], []
         for _ in range(repetition_per_test):
             start_time = time.time()
-
             X, y = load_data(data_location, num_categories, num_images_per_category)
             X_train, X_test, y_train, y_test, _, _, _ = reduce_dimension(X, y, num_pca_components)
             model, _ = train_qsvc(X_train, y_train, num_pca_components, reps, entanglement)
             y_pred, _ = make_prediction(model, X_test)
             accuracy = compute_accuracy(y_test, y_pred)
-
             end_time = time.time()
 
             accuracies_container.append(accuracy)
@@ -106,13 +100,11 @@ def measure_reps() -> tuple[list, list, list]:
         accuracies_container, elapsed_times_container = [], []
         for _ in range(repetition_per_test):
             start_time = time.time()
-
             X, y = load_data(data_location, num_categories, num_images_per_category)
             X_train, X_test, y_train, y_test, _, _, _ = reduce_dimension(X, y, num_pca_components)
             model, _ = train_qsvc(X_train, y_train, num_pca_components, reps, entanglement)
             y_pred, _ = make_prediction(model, X_test)
             accuracy = compute_accuracy(y_test, y_pred)
-
             end_time = time.time()
 
             accuracies_container.append(accuracy)
@@ -133,13 +125,11 @@ def measure_entanglement() -> tuple[list, list, list]:
         accuracies_container, elapsed_times_container = [], []
         for _ in range(repetition_per_test):
             start_time = time.time()
-
             X, y = load_data(data_location, num_categories, num_images_per_category)
             X_train, X_test, y_train, y_test, _, _, _ = reduce_dimension(X, y, num_pca_components)
             model, _ = train_qsvc(X_train, y_train, num_pca_components, reps, entanglement)
             y_pred, _ = make_prediction(model, X_test)
             accuracy = compute_accuracy(y_test, y_pred)
-
             end_time = time.time()
 
             accuracies_container.append(accuracy)

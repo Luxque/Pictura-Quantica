@@ -165,8 +165,8 @@ def center_image(image: np.ndarray) -> np.ndarray:
     # Compute the shift needed to move CoM to the image center.
 
     height, width = image.shape
-    shift_y = height / 2 - cy
     shift_x = width / 2 - cx
+    shift_y = height / 2 - cy
     
     # Shift the image using nearest-neighbor to avoid interpolation blur.
 

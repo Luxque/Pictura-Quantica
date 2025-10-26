@@ -1,14 +1,14 @@
-Accuracy: 74.400%
-AUC: 93.597%
+Accuracy: 66.700%
+AUC: 88.637%
 Classification Report:
               precision    recall  f1-score   support
 
-     Diamond       0.70      0.68      0.69        93
-  Paintbrush       0.66      0.81      0.73        95
-   Parachute       0.67      0.67      0.67       105
-       Radio       0.85      0.81      0.83       101
-   Snowflake       0.86      0.75      0.80       106
+  Basketball       0.63      0.62      0.62       196
+       Broom       0.83      0.73      0.78       206
+        Nail       0.68      0.60      0.63       199
+  Police Car       0.66      0.62      0.64       207
+     Rainbow       0.57      0.77      0.65       192
 
-    accuracy                           0.74       500
-   macro avg       0.75      0.74      0.74       500
-weighted avg       0.75      0.74      0.75       500
+    accuracy                           0.67      1000
+   macro avg       0.68      0.67      0.67      1000
+weighted avg       0.68      0.67      0.67      1000

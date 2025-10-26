@@ -1,14 +1,14 @@
-from train import load_data, reduce_dimension, train_qsvc, make_prediction
-
 import time, os
 import numpy as np
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 from sklearn.metrics import accuracy_score
 
+from train import load_data, reduce_dimension, train_qsvc, make_prediction
 
-data_location = '../dataset'
+
 save_location = '../figures'
+data_location = '../dataset'
 num_categories = 5
 num_images_per_category = 500
 num_pca_components = 6

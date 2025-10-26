@@ -36,6 +36,7 @@ git clone https://github.com/Luxque/Pictura-Quantica.git
     ```bash
     ./installation.sh --no-run
     ```
+4. You will need to unzip 7z files located in [`dataset`](./dataset/) in order to use the sample dataset to train the model.
 
 The repository includes both `installation.ps1` (PowerShell) and `installation.sh` (POSIX). `installation.ps1` temporarily sets the PowerShell execution policy for the current process to allow activating the virtual environment; it does not change your system policy permanently.
 

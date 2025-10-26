@@ -7,6 +7,7 @@ Pictura Quantica is a gamified quantum image classifier inspired by [Quick, Draw
 The project aims to provide a bridge between quantum machine learning and game-like, interactive experiences.
 The model uses PCA and a quantum support vector classifier (QSVC).
 This project was created for the *QPoland Global Quantum Hackathon 2025*.
+The demonstraiton video can be found [here](./video/demonstratoin.mkv).
 
 
 ## Quick Start

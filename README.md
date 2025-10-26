@@ -150,6 +150,7 @@ Please open an issue or submit a pull request on the repository.
 * Improve the GUI and fix bugs.
 * Add an option to train a model on real quantum hardware.
 * Implement a quantum PCA algorithm and integrate it into the project.
+* Release a binary version.
 
 
 ## License

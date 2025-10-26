@@ -88,34 +88,24 @@ Here are the explanations of each button:
 </div>
 
 
+## Sample Model Showcase
+
+<div align='center'>
+
+![confusion_matrix](./model/confusion_matrix.png)
+![decision_regions](./model/decision_regions.png)
+
+</div>
+
+
 ## Benchmarks
 
 <div align='center'>
 
 ![num_of_categories](./figures/num_of_categories.png)
-
-</div>
-
-<div align='center'>
-
 ![num_images_per_catetory](./figures/num_images_per_category.png)
-
-</div>
-
-<div align='center'>
-
 ![num_pca_components](./figures/num_pca_components.png)
-
-</div>
-
-<div align='center'>
-
 ![reps](./figures/reps.png)
-
-</div>
-
-<div align='center'>
-
 ![entanglement](./figures/entanglement.png)
 
 </div>

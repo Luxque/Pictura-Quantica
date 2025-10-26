@@ -194,18 +194,23 @@ Ceteris paribus testing approach.
 def main() -> None:
     test, accuracies, elapsed_times = measure_num_categories()
     plot_results(test, accuracies, elapsed_times, 'Number of Categories', 'num_of_categories.png')
+    print("Benchmarking `num_of_categories` complete.")
 
     test, accuracies, elapsed_times = measure_num_images_per_category()
     plot_results(test, accuracies, elapsed_times, 'Number of Images per Category', 'num_images_per_category.png')
+    print("Benchmarking `num_images_per_category` complete.")
 
     test, accuracies, elapsed_times = measure_num_pca_components()
     plot_results(test, accuracies, elapsed_times, 'Number of PCA Components', 'num_pca_components.png')
+    print("Benchmarking `num_pca_components` complete.")
 
     test, accuracies, elapsed_times = measure_reps()
     plot_results(test, accuracies, elapsed_times, 'Number of Repetition', 'reps.png')
+    print("Benchmarking `reps` complete.")
 
     test, accuracies, elapsed_times = measure_entanglement()
     plot_results(test, accuracies, elapsed_times, 'Entanglement Structure ID', 'entanglement.png')
+    print("Benchmarkign `entanglement` complete.")
 
     return
 

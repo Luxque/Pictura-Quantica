@@ -269,7 +269,7 @@ class QuantumClassifierGUI(QWidget):
             self.model, self.categories, self.pca, self.scaler_std, self.scaler_quantum = train()
             end_time = time.time()
             time_elapsed = end_time - start_time
-            self.result_label.setText(f"Training complete. (Elapsed Time: {time_elapsed:.3f} seconds)")
+            self.result_label.setText(f"🤖 Training complete. (Elapsed Time: {time_elapsed:.3f} seconds)")
         except Exception as e:
             QMessageBox.critical(self, "Error", f"Training failed:\n{e}")
 
